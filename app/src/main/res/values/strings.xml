@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Sig Crime</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello">Hello,</string>
+    <string name="wellcome">Selamat datang </string>
+    <string name="title_kecamatan">Kecamatan</string>
+    <string name="title_news_update">Baru Terjadi</string>
+    <string name="lorem50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel varius lorem. Proin aliquet viverra turpis, nec dictum libero volutpat id. Phasellus quis eleifend nisi. Donec ornare lorem nulla, at ornare nisi blandit sodales. Duis lacus tortor, malesuada vel massa nec, auctor blandit risus. Integer fermentum nisl eget leo venenatis.</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_base_demo">Map</string>
+    <string name="title_activity_news">NewsActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+
+    <string-array name="array_jk">
+        <item>Laki-Laki</item>
+        <item>Perempuan</item>
+    </string-array>
+
+    <string-array name="array_st_kawin">
+        <item>Kawin</item>
+        <item>Belum Kawin</item>
+    </string-array>
+
+</resources>

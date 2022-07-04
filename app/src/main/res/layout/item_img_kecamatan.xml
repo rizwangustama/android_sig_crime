@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="130dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:layout_marginTop="@dimen/spacing_large"
+    android:layout_marginRight="@dimen/spacing_large"
+    android:layout_marginBottom="@dimen/spacing_large"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/spacing_large"
+    android:elevation="15dp">
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/itemKecamatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/spacing_xmedium"
+        android:paddingHorizontal="@dimen/spacing_xmedium"
+        style="@style/RippleStyleBlack">
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/spacing_xmedium"
+            android:paddingHorizontal="@dimen/spacing_xmedium"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/map_img"
+                android:layout_weight="1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                tools:src="@drawable/ic_map_blue_1"
+                android:scaleType="fitCenter"
+                app:tint="@color/colorPrimary" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/item_kec_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Baros"
+                android:textSize="@dimen/text_content"/>
+
+        </LinearLayout>
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+</androidx.cardview.widget.CardView>

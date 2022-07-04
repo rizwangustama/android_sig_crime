@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/spacing_mlarge"
+    android:paddingVertical="@dimen/spacing_mlarge"
+    android:background="#E5E5E5"
+    android:scrollbars="vertical"
+    android:scrollbarStyle="outsideOverlay"
+    tools:context="com.rizwan.sigcrime.HomeFragment">
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--TODO: Layout Wellcome-->
+        <LinearLayout
+            android:id="@+id/container_wellcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:paddingTop="@dimen/spacing_medium"
+            android:paddingBottom="@dimen/spacing_large"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/text_title"
+                    android:textStyle="bold"
+                    android:text="@string/hello"
+                    android:textColor="@android:color/black"/>
+                <TextView
+                    android:id="@+id/wellcome_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/text_subtitle"
+                    android:textStyle="bold"
+                    android:text="@string/wellcome" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="50dp"
+                android:paddingVertical="@dimen/spacing_xsmall"
+                android:paddingHorizontal="@dimen/spacing_xsmall"
+                android:layout_centerHorizontal="true"
+                android:innerRadius="0dp"
+                android:shape="ring"
+                android:thicknessRatio="1.9"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/transparent">
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/cardview_acount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    style="@style/RippleStyleBlack">
+                    <ImageView
+                        android:id="@+id/image_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_sig_crime_round"
+                        android:scaleType="centerCrop"/>
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!--TODO: SIG Banner-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sig_banner_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/container_wellcome"
+            android:backgroundTint="@color/colorPrimary"
+            app:cardCornerRadius="@dimen/spacing_large">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:paddingHorizontal="@dimen/spacing_middle"
+                android:paddingVertical="@dimen/spacing_xmedium"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_map_1"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Jumlah Kejadian"
+                        android:textSize="@dimen/text_title"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:layout_marginBottom="@dimen/spacing_large"/>
+                    <TextView
+                        android:id="@+id/counter_kejahatan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:textSize="38sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--TODO: Layout Home Kecamatan List -->
+        <LinearLayout
+            android:id="@+id/container_kecamatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/spacing_mlarge"
+            android:layout_below="@+id/sig_banner_container"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_super_title"
+                android:layout_marginBottom="@dimen/spacing_middle"
+                android:text="@string/title_kecamatan"
+                android:textColor="@android:color/black" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_kecamatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/spacing_medium"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <!--    TODO Layout Home Berita List -->
+        <LinearLayout
+            android:id="@+id/container_news_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/spacing_mlarge"
+            android:layout_below="@+id/container_kecamatan"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_super_title"
+                android:layout_marginBottom="@dimen/spacing_middle"
+                android:text="@string/title_news_update"
+                android:textColor="@android:color/black"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_berita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/spacing_medium"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+
+</ScrollView>

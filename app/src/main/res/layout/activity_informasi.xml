@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/private_info_container"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundGray"
+    android:paddingHorizontal="@dimen/spacing_mlarge"
+    android:paddingVertical="@dimen/spacing_mlarge"
+    tools:context="com.rizwan.sigcrime.profile.InformasiActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informasi Pribadi"
+        android:textColor="@color/textPrimary"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/relay_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/background_rounded_white"
+        android:paddingHorizontal="@dimen/spacing_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <Spinner
+            android:id="@+id/spinner_jk"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relay_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_rounded_white"
+        android:paddingHorizontal="@dimen/spacing_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relay_1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_agama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Agama"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:textSize="16sp"
+            android:inputType="text"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relay_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_rounded_white"
+        android:paddingHorizontal="@dimen/spacing_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relay_2">
+
+        <Spinner
+            android:id="@+id/spinner_st_kawin"
+            android:layout_width="match_parent"
+            android:layout_height="55dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relay_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_rounded_white"
+        android:paddingHorizontal="@dimen/spacing_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relay_3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_pekerjaan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pekerjaan"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:textSize="16sp"
+            android:inputType="text"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relay_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_rounded_white"
+        android:paddingHorizontal="@dimen/spacing_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relay_4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_kewarganegaraan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kewarganegaraan"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:textSize="16sp"
+            android:inputType="text"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relay_5">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button_white"
+            android:paddingHorizontal="@dimen/spacing_xlarge"
+            android:paddingVertical="@dimen/spacing_large"
+            android:text="Kembali"
+            android:textColor="@color/colorPrimary" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:paddingHorizontal="@dimen/spacing_xlarge"
+            android:paddingVertical="@dimen/spacing_large"
+            android:text="Selanjutnya"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
